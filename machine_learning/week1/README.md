@@ -100,5 +100,6 @@
 
 ### 一変数の線形回帰のAssignments
 
-* TODO
+* 5/5でPass
+* まだプログラミングは不要だが、Cost FunctionのPlotなどが出てきた
 
