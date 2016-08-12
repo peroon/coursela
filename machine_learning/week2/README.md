@@ -182,3 +182,33 @@
 * flipud(eye(9)) 上下入れ替え flip up down
 
 ### Plotting Data
+
+* データをPlotすることで正常動作を確認できる
+* どう改善するかのSenseも与えてくれる
+
+![](./plot.png)
+
+* hold onで重ねPlot
+
+![](./holdon.png)
+
+* xlabel('time')
+* ylabel Plotのラベル
+* legend('sin', 'cos')
+* title('title')
+* print -dpng 'aaa.png' 画像で保存
+* close Plotウィンドウ閉じる
+* figure(1)
+* figure(2) ウィンドウを分ける
+* subplot 1ウィンドウに複数Plot
+ 
+![](./subplot.png)
+
+* axis([0.5 1 -1 1]) 軸の範囲を指定
+* clf clear-figure
+* A = magic(5)
+* imagesc(A) 行列を色を付けてPlot
+* colorbar, colormap gray; Plotの色をグレー
+* a = 1, b = 2
+
+### for, while, if...
