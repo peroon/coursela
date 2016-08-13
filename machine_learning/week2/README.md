@@ -284,6 +284,30 @@ X = [1 1; 1 2; 1 3] design matrix
 * 5. easy
 * 4/5で1だけ間違った
 
-### Programming Assienment
+### Programming Assienment 環境設定
 
-* TODO
+* brew reinstall octave --with-gui
+* こうInstallしないとsubmitしても0点だった（Mac）
+* さらに、Plotのために
+* brew uninstall fontconfig
+* brew install fontconfig --universal
+
+
+### このコードが問題なく実行できるか
+
+* data = load('ex1data1.txt');* x = data(:, 1); y = data(:, 2);* m = length(y); 
+* plot(x, y, 'rx', 'MarkerSize', 10);
+* fontconfigのやつをやったらPlotが表示された
+
+### つづき
+
+* rxってレッドのクロスって意味か
+* θ0はintercept term
+* GDの更新式
+
+![](./gradient-descent.png)
+
+* これを参考にgradientDescent.mを埋める
+* 行列のかけ算をしたら自然と和がとられるのに、Σにひきづられてsum()を書いていたので二重に和をしていてはまった...
+* 「なんでうまくいかないんだろう？」とはまる時間が長かった
+* Advance Topic以外を解いてSubmit
