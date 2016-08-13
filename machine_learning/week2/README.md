@@ -212,3 +212,78 @@
 * a = 1, b = 2
 
 ### for, while, if...
+
+* v = zeros(10, 1)
+* for i=1:10, ..., end;
+* indices = 1:10;
+* for i=indices ...
+* while i<=5, ...; end;
+* disp('aaa') print
+* exit
+* quit
+* filename.m
+
+### 関数定義
+
+* function y = functionName(x)
+* y = x^2
+* .mファイルがあるところからならloadなしで呼べる
+* addpath('...') 関数を探すパス追加
+
+### 関数定義２
+
+* funciton [y1, y2] = aaa(x)
+* y1 = x^2
+* y2 = x^3
+
+### コスト関数も同様に定義
+
+![](./costfunction.png)
+
+X = [1 1; 1 2; 1 3] design matrix
+
+### Vectorization
+
+* run much faster
+* numerical algorithm PhDの人たちによりライブラリは最適化されている
+* 数学では基本縦ベクトル
+* Octaveでは基本横ベクトル
+* forで1要素ずつ計算するのはunvectorized
+* octaveのindexは1からはじまる
+* prediction h = theta' * x;
+* inner product
+* Gradient Descentの各θもvectorized implementationできる
+
+### Quiz (octave totorial)
+
+* 4/5 pass
+* Q5 miss...
+* why?
+
+### Programming tips from Mentors
+
+* Xは全訓練データセット
+* xはシングルデータ
+* h = hypothesis
+* h = theta' * x
+* 質問する前にPostを見よ
+* 提出するときは submit
+* 関数名でForumを検索
+* unit test
+* 関数のreturn前に keyboard コマンドを入れてDebugging
+* test case
+* 点数を判定してくれる？ grader
+
+### Quiz (Linear Regression with Multiple Variables)
+
+* Octaveじゃない方
+* 1. meanで引いて(max-min)で割ってみる
+* 2. easy
+* 3. thetaも特徴の種類＋１の長さ
+* 4. データ数100万のときは逆行列時間かかるのでGradient Descent
+* 5. easy
+* 4/5で1だけ間違った
+
+### Programming Assienment
+
+* TODO
