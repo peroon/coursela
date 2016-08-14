@@ -311,3 +311,23 @@ X = [1 1; 1 2; 1 3] design matrix
 * 行列のかけ算をしたら自然と和がとられるのに、Σにひきづられてsum()を書いていたので二重に和をしていてはまった...
 * 「なんでうまくいかないんだろう？」とはまる時間が長かった
 * Advance Topic以外を解いてSubmit
+
+### Advanced Topic
+
+* 得点はないが余裕があればやるべきQuiz
+
+### Feature Scaling
+
+* Quiz通らないなーと思ったら通ってた。Scoreが0だから通ってないと思っていたが、満点でも0点だった。Feedback=Nice work!となっていることを確認すればよかった・・・
+
+
+![](./feature-scaling.png)
+
+### 多変数のコスト関数とGD
+
+* 一変数のときにvectorizeされていたので同じコードでOK
+
+### Normal Equasions
+
+* ループを回すのではなく数式で解けるやつ closed-form
+* 全問題正解したのでWeek 2完了
