@@ -102,3 +102,26 @@
 ![](./notation.png)
 
 * 5/5 pass
+
+### Solving the Problem of Overfitting
+
+* overfitting
+* ameliorate
+* underfittingそのとき、high bias?
+* overfittingそのとき、high variance?
+* preconception 先入観
+* quadratic function 二次の
+* recap 再生する
+* 回帰で言えば、特徴（調整パラメータ）が多すぎるとoverfittingする
+* overfittingしてしまうとgeneralizeできたとは言えない
+
+![](./overfit.png)
+
+* regularizationの項をコスト関数Jにつけたす。θが小さいとモデルがシンプルになりoverfittingが避けられる？
+* λはregularization parameterで、tradeoff(訓練データへのフィットとシンプルさ)を調整する
+* λが大きすぎるとθを小さくすることだけに注力してしまい、underfittingする（θ_0のみλの影響を受けないのでθ_0だけ残り、それがhとなる）
+* λを自動で決める方法は後述
+
+### Regularized Linear Regression
+
+* コスト関数が変わったからGDでのθ更新式も変わる
