@@ -125,3 +125,30 @@
 ### Regularized Linear Regression
 
 * コスト関数が変わったからGDでのθ更新式も変わる
+* θ_0だけはRegularizationの管理外なので更新式もθ_0専用のものとなる（以下）
+
+![](./theta_update.png)
+
+* n : feature number
+* m : training data number
+* 行列がsingularじゃないならinvertible(逆行列が計算できる)
+
+![](./closed-form.png)
+
+### Regularized Logistic Regression
+
+* すでに最適可能方法としてGDと、Octaveの関数を用いたMore Advancedな方法を伝えている
+* それをLogistic Regressionに適用する
+* fminunc ... f min unconstrained
+* Jに正規化項をつける
+* fminunc ... Advanced Optimization
+
+### Regularization Quiz
+
+* 4/5 pass
+
+### Programming Assignment
+
+* TODO
+
+
