@@ -149,6 +149,16 @@
 
 ### Programming Assignment
 
-* TODO
+* 生徒が入学できるかを推定する
+* plotの肩慣らし
+* 1.2 sigmoid
+* 行列を入力として受け取るためには、elementwise演算子のドットを使う
+* 1 ./ ...
+* コスト関数の実装
 
+![](./costfunc.png)
 
+* 右肩はi番目のデータという意味
+* 仮データX = [1 10 20; 1 11 22]
+* Atomにlanguage-matlabを入れた
+* submitするときにセミコロンが入ってない式があるとPrintしてしまう

@@ -276,12 +276,12 @@ X = [1 1; 1 2; 1 3] design matrix
 
 ### Quiz (Linear Regression with Multiple Variables)
 
-* Octaveじゃない方
-* 1. meanで引いて(max-min)で割ってみる
-* 2. easy
-* 3. thetaも特徴の種類＋１の長さ
-* 4. データ数100万のときは逆行列時間かかるのでGradient Descent
-* 5. easy
+* Octaveじゃない方のクイズ課題
+* 1:meanで引いて(max-min)で割ってみる
+* 2:easy
+* 3:thetaも特徴の種類＋１の長さ
+* 4:データ数100万のときは逆行列時間かかるのでGradient Descent
+* 5:easy
 * 4/5で1だけ間違った
 
 ### Programming Assienment 環境設定
@@ -301,7 +301,7 @@ X = [1 1; 1 2; 1 3] design matrix
 
 ### つづき
 
-* rxってレッドのクロスって意味か
+* パラメータのrxってレッドのクロスって意味か
 * θ0はintercept term
 * GDの更新式
 
