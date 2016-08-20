@@ -1,0 +1,86 @@
+# Week 4 Neural Networks: Representation
+
+* スマホの音声認識
+* 小切手を現金にするときの数字読み取り (cash a check)
+* なぜNNが必要か。今までの手法ではだめか
+* 特徴が２つの場合はLogistic Regression + 特徴の多項化で非線形分離できたが、特徴が100などのときは組み合わせが多すぎる
+* n = 100のとき、組み合わせは5000ほどになってしまう. O(n^2)
+* すると計算量的にきついし、Overfitする
+
+![](./motivations.png)
+
+* x1^2, ...などの2乗だけの特徴を使って数を減らすと、図のように楕円形じゃないとフィットしない
+* x1 * x3 * x17 のように3項の特徴まで使い出すとO(n^3)
+* そして実用において、nは大きい
+* たとえばComputer Vision
+* コンピュータにとって、車のハンドルは数値の列にしか見えない
+
+![](./cv.png)
+
+* 50x50 pixelでも特徴ベクトルの次元n = 2500
+* RGBなら7500
+* NNは80s, 90sに流行ったがlate 90sには衰えた
+* 現代、また注目されている resurgence
+* アプリケーションごとにAlgorithmを作る必要はない仮説
+* 例 auditory cortex (耳)
+* auditory cortexと耳のつながりを切って目とつなげてみたら、acは見ることを覚えた
+* (re-wiring) つなぎかえ
+* BrainPortプロジェクト
+	* 舌で見る
+	* 音を鳴らしてソナーで周りを理解する
+
+![](./one-algorithm.png)
+
+### NN
+
+* neuronは電気のPulseで情報を伝える
+* NNではシグモイド関数をactivate functionという
+* NNではθをweightという
+* x0 : bias unit, 値は1
+* input/hidden/output layer
+* 訓練時、input/outputは見れる(x, y)けど、中間は見れないのでhiddenといわれている
+
+### 記法
+
+![](./notation.png)
+
+### Model Representation II
+
+* vectorizationできる
+* forward propagation 前に前に伝わっていく
+* input/output layerもaとして考えて一般的な式にできる
+
+![](./forward-propagation.png)
+
+* NNはn層とn+1層の関係だけを見るとLogistic Regression
+* XORゲートを学習できるか(1 0, または0 1のときのみ1を出力)
+* まずはANDゲートから考えよう
+* たとえば下のようなweightが学習できればいい
+
+![](./AND.png)
+
+* 真理値表 truth table
+* AND, ORのweight例は示された
+* NOTもつくれる
+* それらの組み合わせでXNORなど他のも作れる
+
+![](./mix.png)
+
+* 回転・スケール・ノイズに対応して数値認識できているビデオ
+
+![](./video.png)
+
+* 384などの3桁もいけてるのがすごい
+
+### 多クラス分類
+
+![](./one-vs-all.png)
+
+* 問題にて、(5+1) * 10 = 60
+
+### Quiz
+
+* 問5が難しい！？
+* 1, 5を間違えた・・・ 3/5
+* 5について図を書いてみると、変わらないと気づいた
+* リトライ。チェック問題は内容が変わってる？5/5でPass
