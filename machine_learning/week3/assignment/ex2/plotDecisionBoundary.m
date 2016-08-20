@@ -1,10 +1,10 @@
 function plotDecisionBoundary(theta, X, y)
 %PLOTDECISIONBOUNDARY Plots the data points X and y into a new figure with
 %the decision boundary defined by theta
-%   PLOTDECISIONBOUNDARY(theta, X,y) plots the data points with + for the 
-%   positive examples and o for the negative examples. X is assumed to be 
-%   a either 
-%   1) Mx3 matrix, where the first column is an all-ones column for the 
+%   PLOTDECISIONBOUNDARY(theta, X,y) plots the data points with + for the
+%   positive examples and o for the negative examples. X is assumed to be
+%   a either
+%   1) Mx3 matrix, where the first column is an all-ones column for the
 %      intercept.
 %   2) MxN, N>3 matrix, where the first column is all-ones
 
@@ -21,13 +21,14 @@ if size(X, 2) <= 3
 
     % Plot, and adjust axes for better viewing
     plot(plot_x, plot_y)
-    
+
     % Legend, specific for the exercise
+    % 各点の意味
     legend('Admitted', 'Not admitted', 'Decision Boundary')
-    axis([30, 100, 30, 100])
+    axis([30, 100, 30, 100]) %軸はX, Yともに30-100
 else
     % Here is the grid range
-    u = linspace(-1, 1.5, 50);
+    u = linspace(-1, 1.5, 50); %-1から1.5まで50区切り
     v = linspace(-1, 1.5, 50);
 
     z = zeros(length(u), length(v));

@@ -162,3 +162,17 @@
 * 仮データX = [1 10 20; 1 11 22]
 * Atomにlanguage-matlabを入れた
 * submitするときにセミコロンが入ってない式があるとPrintしてしまう
+* fminuncを使うとlearning rateを決める必要がない。自動で決めてくれる
+* 非線形のデータ分離
+* これはLRをストレートに実行してもダメ。そのLRは線形分離だから
+* そこで、2.2 Feature Mapping
+
+![](./feature-mapping.png)
+
+* featureを増やしたと言うことはOverfitしやすくなる
+* そこで正規化
+* J, gradは正規化分を書き足せばsubmit Passした
+* fminuncを使うとはいえ、正規化項の重みλは決める必要がある。1とされている
+* 小さくするとoverfit
+* 大きくするとunderfit
+* 課題は全部通った。100/100

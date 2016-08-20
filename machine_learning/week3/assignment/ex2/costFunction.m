@@ -34,7 +34,7 @@ J = 1/m * sum;
 % 傾き
 theta_len = length(theta);
 for j=1:theta_len
-  grad(j) = (sigmoid(X * theta) - y)' * X(:,j);
+  grad(j) = 1/m * (sigmoid(X * theta) - y)' * X(:,j);
 end
 
 
