@@ -43,14 +43,16 @@ function out = output(partId, auxdata)
   t2 = cos(reshape(1:2:40, 4, 5));
 
   if partId == '1'
+    '課題１'
     [J, grad] = lrCostFunction([0.25 0.5 -0.5]', X, y, 0.1);
     out = sprintf('%0.5f ', J);
     out = [out sprintf('%0.5f ', grad)];
   elseif partId == '2'
+    '課題２'
     out = sprintf('%0.5f ', oneVsAll(Xm, ym, 4, 0.1));
   elseif partId == '3'
     out = sprintf('%0.5f ', predictOneVsAll(t1, Xm));
   elseif partId == '4'
     out = sprintf('%0.5f ', predict(t1, t2, Xm));
-  end 
+  end
 end
