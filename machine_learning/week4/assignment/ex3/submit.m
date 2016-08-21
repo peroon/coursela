@@ -51,8 +51,10 @@ function out = output(partId, auxdata)
     '課題２'
     out = sprintf('%0.5f ', oneVsAll(Xm, ym, 4, 0.1));
   elseif partId == '3'
+    '課題３'
     out = sprintf('%0.5f ', predictOneVsAll(t1, Xm));
   elseif partId == '4'
+    '課題４'
     out = sprintf('%0.5f ', predict(t1, t2, Xm));
   end
 end
