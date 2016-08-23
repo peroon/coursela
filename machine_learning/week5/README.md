@@ -45,3 +45,63 @@
 * エラーを前に求めていく方法はわかった
 
 ![](./hatena.png)
+
+### Implementation Note: Unrolling Parameters
+
+* unrolling (matrix to vector)
+* fminuncに食わせるにはθがベクトルである必要があるのかな？Yes
+* 一方NNの各レイヤーのθは行列
+* A(:)で行列がベクトルになる
+* 逆に、reshapeでベクトル→行列
+* D : derivatives
+* 長い縦ベクトルにしてfminincに食わせる
+
+![](./long-vector.png)
+
+### Gradient Checking
+
+* なんでforward/back propagationしてるかというと、Jの微分を求めるため
+* 微分を差分で近似して、微分の実装が正しいかチェックする？
+* one/two side difference
+* partial derivativeもできる
+* backpropで求める理由は、効率がいいから？Yes, 差分で求めるより速い
+
+![](./numerical-derivative.png)
+![](./partial-derivative.png)
+![](./gradient-check.png)
+
+### Random Initialization
+
+* θの初期値を0にするのはLogistic RegressionならOK
+* NNでは隠れ層の出力が全部同じになってしまい、冗長
+* 全部同じになってしまうのを破壊する必要がある。symmetry breaking. 対称性の乱れ
+* Quizで、各θをそれぞれrand(1,1)で初期化したら、symmetry breakに失敗するらしい。Why?
+
+![](./same-output-problem.png)
+![](./random-initialize.png)
+
+### Putting It Together
+
+* 以上を組み合わせて実装するが、隠れ層を何層にするかは決める必要がある
+* 入力層：特徴ベクトルの次元
+* 出力層：クラス数
+* 隠れ層の数は多い方がいい。ユニット数は同じにする（これはDeepLearningとの違い？）
+* 隠れ層やユニット数が多くてOverfittingすることはない？
+* 隠れ層のユニット数は入力層の次元より多い方がいい
+
+![](./step1-4.png)
+![](./step5-6.png)
+
+* non-convexなのでLocal Minimumに陥ることがある。けれどあまり問題にはならないとのこと？
+* どれに落ちても深さは同じくらいになっているのだろう
+
+### Autonomous Driving
+
+* 事例
+* カメラ映像を30x32に縮小して処理
+* この画像のときは人はハンドルをどう切るかを学習する
+
+### Quiz 
+
+* TODO
+
