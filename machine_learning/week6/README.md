@@ -135,4 +135,7 @@
 ### Programming Assignment
 
 * 後回しにしていた分
-* TODO
+* regularized linear regressionをbias/varianceの視点から見る
+* 正規化されたLogistic Regressionは前書いたのでそれを真似る
+* gradはほぼ同じコードでいけた
+* 
