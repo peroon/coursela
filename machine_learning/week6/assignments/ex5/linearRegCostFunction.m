@@ -26,12 +26,12 @@ for i=1:m
 
   h = x_i * theta;
 
-  sum += (h - y(i))^2;
+  sum += (h - y(i)) .^ 2;
 end
 J = 1 / (2 * m) * sum;
 
 %正規化分を書き足す
-n = length(theta)
+n = length(theta);
 theta_sum = theta(2:n)' * theta(2:n);
 J += lambda / (2*m) * theta_sum;
 

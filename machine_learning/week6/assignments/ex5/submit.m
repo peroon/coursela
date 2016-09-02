@@ -50,7 +50,10 @@ function out = output(partId, auxstring)
   elseif partId == '3'
     [error_train, error_val] = ...
         learningCurve(X, y, Xval, yval, 1);
-    out = sprintf('%0.5f ', [error_train(:); error_val(:)]);
+    fprintf('ラーニングカーブの結果\n');
+    error_train
+    error_val
+    out = sprintf('%0.5f ', [error_train(:); error_val(:)])
   elseif partId == '4'
     [X_poly] = polyFeatures(X(2,:)', 8);
     out = sprintf('%0.5f ', X_poly);
@@ -59,5 +62,5 @@ function out = output(partId, auxstring)
         validationCurve(X, y, Xval, yval);
     out = sprintf('%0.5f ', ...
         [lambda_vec(:); error_train(:); error_val(:)]);
-  end 
+  end
 end
