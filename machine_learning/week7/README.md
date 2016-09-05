@@ -105,3 +105,32 @@
 ![](./LR-vs-NN.png)
 
 
+### Programming Assignmetns
+
+* Cを増やすということは、訓練データの誤分類に厳しくするということ
+* θ0 : intercept term
+* σ : sigma
+* λ : ramda
+* gaussian kernel = RBF kernel
+* C, sigmaの探索。Cが大きいとTrainingが遅い？
+* Part2, 訓練でもvalidationで識別率が56.5%しかいかない・・・おかしい・・・
+* 識別境界を描画すると、訓練まではちゃんとできている
+* errorとpredictionを求める式が逆だった・・・解決。
+* Part3. Spam Filter 
+* 特徴の前処理として、URLをurladdrと置換したりする
+* 意外と地味で手がかかる前処理。Deep Learningならこれもスキップできる？
+* すべての単語は使わない。overfitするから
+* Part3, 4はeasyだった
+* 訓練後、どのwordが判別に有効かがわかる。e.g. guarantee, remove, dollar, price
+* でもどうやって？
+* 特徴ベクトルと同じ次元であろうmodel.w (weight)からわかる
+
+```
+[weight, idx] = sort(model.w, 'descend');
+vocabList = getVocabList();
+
+fprintf('\nTop predictors of spam: \n');
+for i = 1:15
+    fprintf(' %-15s (%f) \n', vocabList{idx(i)}, weight(i));
+end
+```
