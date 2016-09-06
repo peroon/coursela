@@ -134,3 +134,5 @@ for i = 1:15
     fprintf(' %-15s (%f) \n', vocabList{idx(i)}, weight(i));
 end
 ```
+
+![](./spam-words.png)
