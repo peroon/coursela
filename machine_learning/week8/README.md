@@ -36,4 +36,110 @@
 
 ### Optimization Objective
 
+* unsupervised learningでもコスト関数最適化の考えを使うことで、実装が正しいか確認できる
+* wrt : with respect to
+* 最適化のループを回している中でコスト関数が上がることがあればそれはバグである
+
+![](./optimization.png)
+
+### Random Initialization
+
+* 最初のμはランダムに選ぶが、訓練データからランダムに選ぶのが良い
+* local optimaにはまることはある
+* k-meansを何回もすればいい
+* Kが10を越えると、何度もやってもそんなに差は出ない
+
+![](./run-multiple-times.png)
+
+### Choosing the Number of Clusters
+
+* Kをどう決めるか
+* あるデータを見たとき、2つのクラスタに見える人もいるし、4つに見える人もいる。つまり、決められない
+* クラスター数を増やせばJは減るが、Kを増やせばいいわけでもない
+* Kを増やせばJが必ず減るわけではない。local optimaにはまればKが大きくてもJも大きくなる
+* Elbow methodでKを決めるのもいい。ただしElbowが曖昧なこともある（カーブを近似して微分したらどう？）
+* クラスタリングした後の用途を考えて、人間がKを決めるのが良い
+
+![](./elbow-method.png)
+![](./human-choose-K.png)
+
+### Quiz
+
+* Passed (No Problem)
+
+### Dimensionality Reduction (by PCA)
+
+* このdimensionality reductionでdata compressionできると、
+	* memory, disk reduction
+	* speed up learning algorithm
+* いろんなところから特徴を集めると重複する redundant features
+* 2Dのデータ→1Dのデータにリダクション。3D->2Dも同様。データがcorrelateしてたらできる
+* Octaveで3D plotはグリグリ視点を変えられる
+
+![](./3D-to-2D-reduction.png)
+
+### Motivation II: Visualization
+
+* データを理解するのにVisualizingは良い
+* 50次元を2次元にreductionしてplotする。そのときの特徴z1, z2には意味はない
+* 下の絵だと軸に意味が書いてあるのは、有効な特徴を上位から２つ取ってきたのだろう
+
+![](./visualize-GDP.png)
+
+### Principal Component Analysis Problem Formulation
+
+* formulate : 定式化する
+* 次元を落とした面への射影距離(projection error)の二乗和をminにする
+* 事前処理としてmean normalizatoinしておく(zero meanになる)
+* PCAは面に垂直に落とした距離の二乗和なので、LRとは違う
+
+![](formulate.png)
+
+### Principal Component Analysis Algorithm
+
+* 前処理として
+	* meanで引いて
+	* sで割る (s : standard deviation)
+
+![](./PCA-algorithm.png)
+![](./PCA-summary.png)
+
+### Reconstruction from Compressed Representation
+
+* 応用として、データをcompressしたものからの復元
+* x -> zとは逆方向なので、z = U * xに逆行列をかければ逆変換できる
+
+![](./reconstruction-from-compressed.png)
+
+### Choosing the Number of Principal Components
+
+* kをどう決める？
+* 0.01 : （発音）オー・ポイント・オー・ワン
+* 99%のvarianceが保持されるように決める（高い印象）
+* （PCAで画像圧縮できそう）
+* 現実のデータはhighly correlatedなので99%のvarianceを残しても多くを圧縮できる
+* denominator : 分母
+
+![](./99-percent-retained.png)
+![](./choosing-K.png)
+
+### Advice for Applying PCA
+
+* supervised learningのXの特徴の次元がとても大きいとき、次元削減すると学習速度が上がる
+* 特徴を沢山集めたけど冗長に重なっている印象があればPCAでreductionするとよさそう
+* 訓練データでmean normalizationやPCAのUを求めたら、そのパラメータをそのままvalidation/test dataにも適用する
+* 次元削減することで学習は速くなるだろうけど識別率は下がりそう。トレードオフ
+* 次元削減するとoverfitしにくくなるが、その用途ならλを使うべき
+* 次元削減は情報を捨てているので、99%は残したとはいえ、貴重な（識別に重要な）1%を捨てている可能性がある
+* 最初からPCAを取り入れるのではなく、まずはXのまま学習させてみるのがよい
+* メモリやDiskが足りなければPCAを検討すればいい
+* 最初から知ってることを全部入れて複雑にしすぎるのはよくないということだろう
+
+![](./PCA-for-speedup.png)
+![](./application-of-PCA.png)
+![](./dont-use-PCA-to-prevent-overfitting.png)
+![](./at-first-dont-make-complex-system.png)
+
+### Quiz
+
 * TODO
