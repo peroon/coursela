@@ -142,7 +142,7 @@
 
 ### Quiz
 
-* No Problem
+* Passed. No Problem
 
 ### Programming Assignment
 
