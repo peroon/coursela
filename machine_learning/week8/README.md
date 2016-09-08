@@ -146,4 +146,6 @@
 
 ### Programming Assignment
 
-* TODO
+* k-meansで画像圧縮。きた！
+* PCAで顔画像の低次元表現。eigenface?
+* 
