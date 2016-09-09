@@ -146,6 +146,35 @@
 
 ### Programming Assignment
 
+#### k-means
+
 * k-meansで画像圧縮。きた！
 * PCAで顔画像の低次元表現。eigenface?
+* meansが行と縦のどちらに行うか、指定すべき
+* 指定しなければデフォルトは縦に平均を取るが、入力が行列じゃなくてベクトルの時は気を利かせて横にmeanしてしまうため
+* centroidの初期値をサンプルからランダムにK個決める方法↓
+
+```
+% Randomly reorder the indices of examplesrandidx = randperm(size(X, 1));% Take the first K examples as centroidscentroids = X(randidx(1:K), :);
+```
+
+* 例: randperm(3) = [2 1 3]
+* permute: 並べ替える
+* 画像圧縮。RGB各8bitの画像を、16色で表現する　→1画素に4bitで済むようになる
+* 画像はimreadで読む
+* A = imread(path);
+* A(row, column, rgb);
+* A(1, 2, 3); %1行2列目のBlueの値
+* centroidが決まったら、各ピクセルを一番近いcentroidに割り当てる
+* 24bit -> 4bitなので、画像サイズは1/6になる
+
+#### PCA
+
+* やり方
+	* 特徴をスケーリング
+	* covariance matrixを求める	
+	* それのeigenvectorsを求める
+	* eigenvectorをk本並べた行列でデータXを射影する
+* 代入時の注意 Zのi行目に代入したいとき、Z(i) = ではなくて、Z(i, :) = と書かないと次元が合わない
 * 
+	
