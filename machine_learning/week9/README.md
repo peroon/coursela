@@ -110,8 +110,90 @@
 ![](./how-to-detect.png)
 ![](./comparison-to-no-multi-gaussian.png)
 
+
+---
+
 # Recommender Systems
 
-* Amazon, Netflix
+* Amazon, Netflix, eBay, iTunes Genius, etc
 * 異なるユーザの行動パターンを見る
-* 
+* シリコンバレーの機械学習エンジニアが改良したいものは？recommender system
+* academicでは取り上げられにくいが、ビジネスだとよく使う
+* recommender systemは、missing value "?" を埋める
+
+![](./movie-recommendation.png)
+
+### Content Based Recommendations
+
+* とは？
+* 1手法としてLRを使えば、各ユーザの評価の仕方をモデル化して、未評価の映画の評価を推定することができる
+* least square regression
+* more advanced optimization algorithms: conjugate gradient, LBFGS, ..
+* しかし各映画の特徴ベクトルを求めることが必要。そこで次回は・・・
+
+![](./content-based-recommendation.png)
+![](./formulation.png)
+![](./optimization-objective.png)
+![](./optimization-algorithm.png)
+
+
+### Collaborative Filtering
+
+* feature learningとも言われる
+* 特徴ベクトルを作るのは大変。映画の場合は各映画を見なければいけない？（機械が映画を見てくれないかな）
+* xを求めるのは大変
+	* θがわかるとxがわかる
+	* xがわかるとθがわかる
+		* θをランダム初期化してxを求める→そのxを使ってθを求める→このループでxを求める
+* このアルゴリズムの前提
+	* 各ユーザが多くの映画をレビューしている
+	* 各映画が多くレビューされている
+
+![](./from-theta-estimate-x.png)
+![](./collaborative-filtering.png)
+
+### Collaborative Filtering Algorithm
+
+* θ, xを同時に求める方法がある
+* θ_0は今回出てこない。これでgradなどで特別対応しなくてよい
+* （今まではなんでθ_0があって、今回なんで不要？）
+* x, θはランダム初期化する（ゼロ初期化したら問題が起こる？）
+
+![](./optimization-of-collaborative-filtering.png)
+![](./use-of-collaborative-filtering.png)
+
+### Vectorization: Low Rank Matrix Factorization
+
+* low rankとは？TODO
+* low rank matrix factorizationとは？TODO
+
+![](./collaborative-Y.png)
+![](./vectorized-collaborative.png)
+![](./recommendation.png)
+
+### Implementational Detail: Mean Normalization
+
+* 1つもrateしてないユーザの嗜好θは決められるか？
+* 最適化したい式に正規化項があるが、それはθをゼロベクトルに向かわせるよう働く、しかしそれは何もreocommendできなくなってよくない
+* しかしθベクトルを0に近づける力は、overfitを避けてくれるので残したい。そこで・・・mean normalization
+	* 教師データのYから平均μを引いたものをYとする
+	* predict後は予想値にμを足す
+* 今回の映画recommendationでは学習データ(of movie ratings)のスケールが合っているので、事前処理としてのfeature scalingは不要
+* n: 特徴ベクトルxの長さ
+
+### Programming Assignments
+
+* TODO
+
+
+
+
+
+
+
+
+
+
+
+
+
