@@ -183,8 +183,9 @@
 
 ### Programming Assignments
 
-* TODO
-
+* anomaly detectionでサーバが落ちたかを判定する
+	* 便利！
+* 
 
 
 
