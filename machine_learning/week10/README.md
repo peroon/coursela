@@ -80,8 +80,3 @@
 
 ![](./map-reduce.png)
 ![](./map-reducable.png)
-![](./.png)
-![](./.png)
-![](./.png)
-![](./.png)
-![](./.png)
