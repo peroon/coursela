@@ -54,4 +54,13 @@
 ### Ceiling Analysis: What Part of the Pipeline to Work on Next
 
 * 各エンジニアがｍoduleを作っていて、改善がなかったというのは避けたい。そこでceiling analysis
-* TODO
+* ceiling analysys
+	* moduleの下流の方から、もしそのmoduleが完璧な仕事をした場合、最終の認識率がどれだけ上がるかを見る
+	* 次にもう一段上のmoduleにも完璧な仕事を仮にさせる
+	* 同様に上流まで行い、最終的な認識率は100%となる
+	* そして、どこを改善すると最終Accuracyに大きく影響するかを見て、注力するmoduleを決める
+* 教授は「ここを直せば伸びそう」という感覚に頼る(gut feeling)のはやめて、計測するようにした
+
+![](./ceiling-analysis.png)
+![](./face-detection.png)
+![](./at-last-100-percent.png)
