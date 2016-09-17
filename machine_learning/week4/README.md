@@ -122,3 +122,5 @@
 * どっちでも計算できてしまうから迷う
 * Layerが増えたときに整理しよう！
 * Pass
+
+[week5 note](https://github.com/peroon/coursela/tree/master/machine_learning/week5)

@@ -176,3 +176,5 @@
 * 小さくするとoverfit
 * 大きくするとunderfit
 * 課題は全部通った。100/100
+
+[week4 note](https://github.com/peroon/coursela/tree/master/machine_learning/week4)

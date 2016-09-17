@@ -143,3 +143,5 @@
 * 訓練データが増えるほど、error_trainは増え、error_validationは減り、両者は近づいていく
 * LRにて、underfitting, overfittingしたくないなら正規化項が必要。λの決め方は、validation setを使う
 * learningCurve, validationCurveにて、errorを計算するときにλ=0にする理由がよくわからなかったが、pdf p6に書いてある。errorとコスト関数Jは違うということだろう。LRでは、Jのλ=0にすればerrorが求まる
+
+[week7 note](https://github.com/peroon/coursela/tree/master/machine_learning/week7)

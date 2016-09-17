@@ -183,3 +183,5 @@
 	* 3次元データを2次元にPCAすることで見やすくなるし、円で囲ってグループ分けして名前を付けたりできる
 	
 ![](./visualized-data.png)
+
+[week9 note](https://github.com/peroon/coursela/tree/master/machine_learning/week9)

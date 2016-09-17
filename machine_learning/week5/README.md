@@ -131,7 +131,4 @@
 * 行列の次元に気をつけながら通した。Pass 100/100
 * backpropagationという山を越えた
 
-
-
-
-
+[week6 note](https://github.com/peroon/coursela/tree/master/machine_learning/week6)

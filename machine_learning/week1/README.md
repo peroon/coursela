@@ -103,3 +103,4 @@
 * 5/5でPass
 * まだプログラミングは不要だが、Cost FunctionのPlotなどが出てきた
 
+[week2 note](https://github.com/peroon/coursela/tree/master/machine_learning/week2)

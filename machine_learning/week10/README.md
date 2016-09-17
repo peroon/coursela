@@ -80,3 +80,5 @@
 
 ![](./map-reduce.png)
 ![](./map-reducable.png)
+
+[week11 note](https://github.com/peroon/coursela/tree/master/machine_learning/week11)

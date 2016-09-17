@@ -331,3 +331,5 @@ X = [1 1; 1 2; 1 3] design matrix
 
 * ループを回すのではなく数式で解けるやつ closed-form
 * 全問題正解したのでWeek 2完了
+
+[week3 note](https://github.com/peroon/coursela/tree/master/machine_learning/week3)

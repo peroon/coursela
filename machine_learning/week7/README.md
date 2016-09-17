@@ -117,13 +117,13 @@
 * 識別境界を描画すると、訓練まではちゃんとできている
 * errorとpredictionを求める式が逆だった・・・解決。
 * Part3. Spam Filter 
-* 特徴の前処理として、URLをurladdrと置換したりする
-* 意外と地味で手がかかる前処理。Deep Learningならこれもスキップできる？
-* すべての単語は使わない。overfitするから
-* Part3, 4はeasyだった
-* 訓練後、どのwordが判別に有効かがわかる。e.g. guarantee, remove, dollar, price
-* でもどうやって？
-* 特徴ベクトルと同じ次元であろうmodel.w (weight)からわかる
+	* 特徴の前処理として、URLをurladdrと置換したりする
+	* 意外と地味で手がかかる前処理。Deep Learningならこれもスキップできる？
+	* すべての単語は使わない。overfitするから
+	* Part3, 4はeasyだった
+	* 訓練後、どのwordが判別に有効かがわかる。e.g. guarantee, remove, dollar, price
+	* でもどうやって？
+	* 特徴ベクトルと同じ次元であろうmodel.w (weight)からわかる
 
 ```
 [weight, idx] = sort(model.w, 'descend');
@@ -136,3 +136,5 @@ end
 ```
 
 ![](./spam-words.png)
+
+[week8 note](https://github.com/peroon/coursela/tree/master/machine_learning/week8)

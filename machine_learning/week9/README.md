@@ -210,6 +210,7 @@ B = reshape(A,[5,2])
 * あなたの好きなゲームのタイトルを点数付きでいくつか入れると、リコメンドすることができるし、似ているユーザを提示して仲良くなれるかもしれない。New SNS!
 * それはマンガやアニメなどでも応用できるし、1つ汎用的な仕組みを作ればいくつも作ることができる
 
+[week10 note](https://github.com/peroon/coursela/tree/master/machine_learning/week10)
 
 
 
