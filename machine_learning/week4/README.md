@@ -103,24 +103,24 @@
 * part1.mを作って仮データで動作確認すると、J, gradともに0になっている・・・
 * lrCostFunction通ってなくない？printされない
 * なんと、Downloads以下のコードを編集していた
-* 先週のコードを貼り付けると課題１は通った
+* 先週のコードを貼り付けると課題1は通った
 * vectorizeは保留
 
 ### 課題２
 * ラベルをLogical Arrayに変換する（どれかが１で他は０のベクトル）
 * 実装してSubmitしてPass、通った！OK
-* でも実戦では正しく動いた場合のθや判別値をテストとして用意しておいて、それとの一致を確かめる必要があるだろうね
+* でも実戦では正しく動いた場合のθや判別値をテストとして用意しておいて、それとの一致を確かめる必要があるだろう
 * fmin系の最適化はかなり便利
 * パラメータが多い場合(まさにNN)はfminuncではなくfmincgを使うらしい
 
 ### 課題３
 
-* Pass
+* No problem
 
 ### 課題４
 * Xθがいいのか、θXがいいのか
 * どっちでも計算できてしまうから迷う
 * Layerが増えたときに整理しよう！
-* Pass
+* No problem
 
 [week5 note](https://github.com/peroon/coursela/tree/master/machine_learning/week5)

@@ -73,7 +73,7 @@
 
 ### Building a Spam Classifier
 
-* これから教える手法はtime saverとなるそう。ng教授は無駄な時間を避けることを何度か言っている
+* これから教える手法はtime saverとなるそう。ng教授は無駄な時間を避ける重要性を何度も伝えている
 * Spamメールは単語をわざと書き換える e.g. med1cine フィルターをかいくぐるためだろう(deliberate misspellings)
 * メールを特徴ベクトルにするには、各単語が存在するかの0, 1ベクトルにする
 * Spammerはexclamation mark !をよく使う
@@ -86,10 +86,10 @@
 * まず難しい手法は使わず1日ぐらいでシンプルに作ってみる
 * learning curveを見て、データを増やす、特徴を増やすなど決める
 * error analysis. 分類を間違えた例を観察して新たな特徴を考える
-* たとえばSpam mailならパスワードを盗む用のURLに注目するなど
+	* たとえばSpam mailならパスワードを盗む用のURLに注目するなど
 * なぜシンプルな実装から始めるかの理由は、分類を失敗する例を観察するため
 * discount, discountsなどの変化系は同じとして扱うべきだろうか？
-* 同じとして扱いたいなら、stemming softwareがある
+	* 同じとして扱いたいなら、stemming softwareがある
 * error analysisはvalidation dataに対して行う。test dataではない
 * upper/lower caseは区別すべきか？それもvalidation dataのerror analysisで結果を見てみればいい
 * 「パラメータをどう決めたの？テストデータに対して最適化されてない？」というのは基本的だけどしておくべき質問
@@ -114,8 +114,6 @@
 * どちらもprecision/recallのトレードオフとなる。どちらを望むか
 * F1 scoreを使うと、低い値の影響を大きく扱える
 * クロスバリデーションセットにおいて、閾値をいろいろ変えて、1番F1値が高い閾値を選べばよい
-
-
 
 ![](./trade-off.png)
 ![](./F1.png)

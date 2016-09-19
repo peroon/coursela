@@ -1,6 +1,6 @@
 # Week 3
 
-### logistic regression
+### Logistic regression
 
 * for classification
 * i.e. spam / not spam
@@ -48,7 +48,7 @@
 ### Cost Function
 
 * linear regressionのJ定義では、non-convex? of theta
-* non-convexだとGDが効かない(global minimumじゃなくてlocal minimumに落ちてしまう)
+* non-convexだとGradient descentが効かない(global minimumじゃなくてlocal minimumに落ちてしまう)
 
 ![](./convex.png)
 
@@ -106,9 +106,9 @@
 ### Solving the Problem of Overfitting
 
 * overfitting
-* ameliorate
-* underfittingそのとき、high bias?
-* overfittingそのとき、high variance?
+* ameliorate: 改善する
+* underfitting = high bias
+* overfitting = high variance
 * preconception 先入観
 * quadratic function 二次の
 * recap 再生する

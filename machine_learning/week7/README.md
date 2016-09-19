@@ -26,7 +26,7 @@
 ### Mathematics Behind Large Margin Classification
 
 * 数学的裏付け
-* Skip可能
+	* Skip可能
 * 内積とは
 	* 値 ∈ R
 	* 射影
@@ -91,12 +91,14 @@
 * kernelを自作するなら、Mercer's Theoremを満たす必要がある
 * 多クラス分類には1-vs-allを使う。packageでは最初から使える
 * LRのsigmoidを直線にしたのがSVMという導入だったが、どちらがよいのか？どう使い分けるのか？
-* 特徴が多い場合 (n >> m)
-	* LRを使う, またはlinear kernel SVM
-* n < mのとき
+* n: number of features
+* m: number of training examples
+* 特徴は多いが、データ数は少ない場合 (n >> m)
+	* Logistic regressionを使う, またはlinear kernel SVM
+* n < mのとき（データ数が多い場合）
 	* SVM with gaussian kernel
 * n << mのとき（ビッグデータ時代はこれ？）
-	* 特徴不足なので特徴を追加して、LRまたはlinear SVM
+	* 特徴不足なので特徴を追加して、Logistic Regressionまたはlinear SVM
 * LRとlinear SVMは似ている
 * 上記どの条件でも、NNはうまく動く。ただし訓練に時間がかかる
 * SVMはconvex optimization problemなのでlocal optimaに嵌まらない
@@ -109,8 +111,8 @@
 
 * Cを増やすということは、訓練データの誤分類に厳しくするということ
 * θ0 : intercept term
-* σ : sigma
-* λ : ramda
+* σ: sigma
+* λ: ramda
 * gaussian kernel = RBF kernel
 * C, sigmaの探索。Cが大きいとTrainingが遅い？
 * Part2, 訓練でもvalidationで識別率が56.5%しかいかない・・・おかしい・・・

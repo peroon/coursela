@@ -24,7 +24,7 @@
 * するとGDでジグザグにたどることになる
 * Max値で割って0-1にする
 * -1<= x <= 1にするのもある
-* (データ - mean)/(max-min) ...mean normalization
+* Mean normalization: (データ - mean)/(max-min)
 * myu_1 : mean
 * (max - min)で割る for standard deviation?
 * これで速く収束する

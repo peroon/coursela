@@ -43,7 +43,7 @@
 	* increase feature vector dimension
 * if high variance
 	* over fitting
-	* increase learning data学習データの数を増やす
+	* increase learning data
 	* regularization
 
 ### Algorithms
@@ -55,30 +55,59 @@
 		* Neural network
 		* Support vector machine
 		* Collaborative filtering
+		* Online learning 
 	* Unsupervised
 		* k-means
-
+		* Principal Component Analysis
 
 * Optimization
 	* general
 		* Gradient descent
 		* Stochastic gradient descent
+		* Mini-Batch Gradient Descent
 	* NN
 		* Backpropagation
+		* Random initialization
 	
+### Other techniques
+
+* Feature scaling
+* Vectorization (for fast computing)
+* Regularization
+* Feature mapping (increase feature dimension)
+* Multiple classification (1-vs-all)
+* Elbow method [week8](https://github.com/peroon/coursela/tree/master/machine_learning/week8)
+* maximum likelihood estimation
+* multivariate gaussian distribution
+* Map-reduce
+* Synthesizing data by distortion
+* ceiling analysys
 
 ### Application examples
 
 * Linear Regression
-	* 
+	* Model fitting
 * Logistic Regression
-	* TODO
+	* Classification
+		* Spam detection
 * Neural Network
-	* MNIST
+	* character recognition (MNIST)
+	* Autonomous driving
 * Support Vector Machine
 	* Spam filter
 		* spma word list up
-
+* k-means
+	* market segmentation
+	* data compression
+* PCA
+	* visualizing
+* Gaussian Distribution
+	* Anomaly detection
+		* fraud
+		* monitoring computers
+* Collaborative Filtering
+	* Recommender system [week9](https://github.com/peroon/coursela/tree/master/machine_learning/week9)
+	
 ### How to evaluate if biased data
 
 * e.g. 
